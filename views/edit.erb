@@ -1,0 +1,19 @@
+<div id="app">
+	<div class="row">
+		<div class="col s12">
+			<form action="/<%= @workshop %>/edit" method="post">
+				
+					<input type="hidden" name="_method" value="put">
+
+					<div class="input-field col s12">
+						<textarea name="description" rows="10" cols="40" class="materialize-textarea validate">
+								<%= @description %>
+						</textarea>
+					</div>
+					<div class="input-field col s12">
+						<input type="submit" value="Send feed" class="waves-effect waves-light btn">
+					</div>
+			</form>
+		</div>
+	<div>
+</div>

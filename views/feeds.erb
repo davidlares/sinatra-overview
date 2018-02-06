@@ -1,0 +1,17 @@
+<div id="app">
+	<ul class="collection with-header">
+	<!-- tags erb -->
+	 	<li class="collection-header"><h4>WorkShop Feed</h4></li>
+		<% @files.drop(2).each do |file| %>
+			<li class="collection-item">
+				<div>
+					The file found is: <%= file %>
+						<a href="/workshop/<%= File.basename(file,".*") %>" class="secondary-content">
+							<i class="material-icons">send</i>
+						</a>
+				</div>
+			</li>
+        <% end %>
+	<!-- se usa drop(2) para quitar los directorios ocultos de la carpeta de archivos -->
+	</ul>
+</div>
